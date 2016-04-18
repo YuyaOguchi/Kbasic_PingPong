@@ -1,0 +1,633 @@
+﻿Begin Form *
+    Background = "blue-eye-tech.jpg"
+    Caption = "Classic Pong"
+    Cursor = ""
+    DockTitleVisible = True
+    DrawOnPaint = True
+    GlobalX = 0
+    GlobalY = 0
+    Height = 580
+    LoadedHeight = 577
+    LoadedWidth = 800
+    LoadedX = 192
+    LoadedY = 6
+    MouseTracking = True
+    Opacity = 1000
+    Resizable = True
+    SQLDelete = True
+    SQLInsert = True
+    SQLUpdate = True
+    Visible = True
+    Width = 800
+    X = 192
+    Y = 6
+
+
+  Begin Label lblPlayer1
+    Background = "&HFFFFFF"
+    BackgroundStyle = ";"
+    Caption = ""
+    DrawOnPaint = True
+    Enabled = False
+    FontSize = 12
+    GlobalX = 0
+    GlobalY = 0
+    Height = 100
+    LoadedHeight = 100
+    LoadedWidth = 15
+    LoadedX = 12
+    LoadedY = 178
+    ParentControl = ""
+    TabIndex = 0
+    TableViewVisible = True
+    Visible = True
+    Width = 15
+    WordWrap = True
+    X = 12
+    Y = 178
+  End
+
+  Begin Label lblPlayer2
+    Background = "&HFFFFFF"
+    BackgroundStyle = ";"
+    Caption = ""
+    DrawOnPaint = True
+    Enabled = True
+    FontSize = 12
+    GlobalX = 0
+    GlobalY = 0
+    Height = 100
+    LoadedHeight = 100
+    LoadedWidth = 15
+    LoadedX = 774
+    LoadedY = 174
+    ParentControl = ""
+    TabIndex = 0
+    TableViewVisible = True
+    Visible = True
+    Width = 15
+    WordWrap = True
+    X = 774
+    Y = 174
+  End
+
+  Begin Label lblBall
+    BackgroundStyle = ";"
+    Caption = "Label"
+    DrawOnPaint = True
+    Enabled = True
+    GlobalX = 0
+    GlobalY = 0
+    Height = 20
+    LoadedHeight = 20
+    LoadedWidth = 20
+    LoadedX = 282
+    LoadedY = 198
+    ParentControl = ""
+    TabIndex = 0
+    TableViewVisible = True
+    Visible = False
+    Width = 20
+    WordWrap = True
+    X = 282
+    Y = 198
+  End
+
+  Begin Label lblScore1
+    Caption = "0 Pts"
+    DrawOnPaint = True
+    Enabled = True
+    FontColor = "&HFFFFFF"
+    GlobalX = 0
+    GlobalY = 0
+    Height = 30
+    LoadedHeight = 30
+    LoadedWidth = 120
+    LoadedX = 54
+    LoadedY = 60
+    ParentControl = ""
+    TabIndex = 0
+    TableViewVisible = True
+    Visible = True
+    Width = 120
+    WordWrap = True
+    X = 54
+    Y = 60
+  End
+
+  Begin Label lblscore2
+    Caption = "0 Pts"
+    DrawOnPaint = True
+    Enabled = True
+    FontColor = "&HFFFFFF"
+    GlobalX = 0
+    GlobalY = 0
+    Height = 30
+    LoadedHeight = 30
+    LoadedWidth = 65
+    LoadedX = 645
+    LoadedY = 67
+    ParentControl = ""
+    TabIndex = 0
+    TableViewVisible = True
+    Visible = True
+    Width = 65
+    WordWrap = True
+    X = 645
+    Y = 67
+  End
+
+  Begin CommandButton cmdQuit
+    Caption = "Quit"
+    DrawOnPaint = True
+    Enabled = True
+    GlobalX = 0
+    GlobalY = 0
+    Height = 35
+    LoadedHeight = 35
+    LoadedWidth = 72
+    LoadedX = 721
+    LoadedY = 511
+    ParentControl = ""
+    TabIndex = 0
+    Visible = True
+    Width = 72
+    X = 721
+    Y = 511
+  End
+
+  Begin Timer tmrGame
+    DrawOnPaint = True
+    Enabled = False
+    EventOnOpen = True
+    GlobalX = 0
+    GlobalY = 0
+    Height = 56
+    Interval = 7
+    LoadedHeight = 56
+    LoadedWidth = 65
+    LoadedX = 530
+    LoadedY = 18
+    ParentControl = ""
+    TabIndex = 0
+    Width = 65
+    X = 530
+    Y = 18
+  End
+
+  Begin Timer tmrcountdown
+    DrawOnPaint = True
+    Enabled = True
+    GlobalX = 0
+    GlobalY = 0
+    Height = 59
+    Interval = 1000
+    LoadedHeight = 59
+    LoadedWidth = 61
+    LoadedX = 378
+    LoadedY = 9
+    ParentControl = ""
+    TabIndex = 0
+    Width = 61
+    X = 378
+    Y = 9
+  End
+
+  Begin Label lblCountDown
+    Alignment = "AlignCenter;"
+    Caption = "3"
+    DrawOnPaint = True
+    Enabled = True
+    FontColor = "&HFFFFFF"
+    FontSize = 50
+    GlobalX = 0
+    GlobalY = 0
+    Height = 70
+    LoadedHeight = 70
+    LoadedWidth = 195
+    LoadedX = 306
+    LoadedY = 120
+    ParentControl = ""
+    TabIndex = 0
+    TableViewVisible = True
+    Visible = True
+    Width = 195
+    WordWrap = True
+    X = 306
+    Y = 120
+  End
+
+  Begin Label Label7
+    Caption = "Player 1"
+    DrawOnPaint = True
+    Enabled = True
+    FontColor = "&HFFFFFF"
+    FontSize = 20
+    GlobalX = 0
+    GlobalY = 0
+    Height = 30
+    LoadedHeight = 30
+    LoadedWidth = 120
+    LoadedX = 55
+    LoadedY = 19
+    ParentControl = ""
+    TabIndex = 0
+    TableViewVisible = True
+    Visible = True
+    Width = 120
+    WordWrap = True
+    X = 55
+    Y = 19
+  End
+
+  Begin Label Label8
+    Caption = "Player 2"
+    DrawOnPaint = True
+    Enabled = True
+    FontColor = "&HFFFFFF"
+    FontSize = 20
+    GlobalX = 0
+    GlobalY = 0
+    Height = 30
+    LoadedHeight = 30
+    LoadedWidth = 120
+    LoadedX = 645
+    LoadedY = 19
+    ParentControl = ""
+    TabIndex = 0
+    TableViewVisible = True
+    Visible = True
+    Width = 120
+    WordWrap = True
+    X = 645
+    Y = 19
+  End
+
+  Begin ImageBox Imgball
+    DrawOnPaint = True
+    GlobalX = 0
+    GlobalY = 0
+    Height = 35
+    LoadedHeight = 35
+    LoadedWidth = 33
+    LoadedX = 239
+    LoadedY = 186
+    ParentControl = ""
+    StringValue = "Fireball.png"
+    TabIndex = 0
+    TableViewVisible = True
+    Visible = True
+    Width = 33
+    X = 239
+    Y = 186
+  End
+
+  Begin CommandButton CmdInstruction
+    Caption = "Instruction"
+    DrawOnPaint = True
+    Enabled = True
+    GlobalX = 0
+    GlobalY = 0
+    Height = 38
+    LoadedHeight = 38
+    LoadedWidth = 96
+    LoadedX = 4
+    LoadedY = 506
+    ParentControl = ""
+    TabIndex = 0
+    Visible = True
+    Width = 96
+    X = 4
+    Y = 506
+  End
+
+  Begin CommandButton CmdPause
+    Caption = "Pause"
+    DrawOnPaint = True
+    Enabled = True
+    GlobalX = 0
+    GlobalY = 0
+    Height = 51
+    LoadedHeight = 51
+    LoadedWidth = 143
+    LoadedX = 331
+    LoadedY = 71
+    ParentControl = ""
+    TabIndex = 0
+    Visible = True
+    Width = 143
+    X = 331
+    Y = 71
+  End
+
+  Begin CommandButton CmdRestart
+    Caption = "Restart"
+    DrawOnPaint = True
+    Enabled = True
+    GlobalX = 0
+    GlobalY = 0
+    Height = 34
+    LoadedHeight = 34
+    LoadedWidth = 140
+    LoadedX = 332
+    LoadedY = 250
+    ParentControl = ""
+    TabIndex = 0
+    Visible = False
+    Width = 140
+    X = 332
+    Y = 250
+  End
+
+  Begin CommandButton cmdUnPause
+    Caption = "Pause"
+    DrawOnPaint = True
+    Enabled = True
+    GlobalX = 0
+    GlobalY = 0
+    Height = 51
+    LoadedHeight = 51
+    LoadedWidth = 143
+    LoadedX = 331
+    LoadedY = 71
+    ParentControl = ""
+    TabIndex = 0
+    Visible = False
+    Width = 143
+    X = 331
+    Y = 71
+  End
+
+End Form
+/*
+Pong Project
+
+Chisei Mizuno
+Yuya Oguchi
+
+11/28/2012
+V1.2
+*/
+
+/* Player 1 pad */
+Dim img1_top As Integer
+Dim img1_left As Integer
+Dim img1_right As Integer
+Dim img1_bottom As Integer
+/* Ball */
+Dim img2_top As Integer
+Dim img2_left As Integer
+Dim img2_right As Integer
+Dim img2_bottom As Integer
+
+Dim img3_top As Integer
+Dim img3_left As Integer
+Dim img3_right As Integer
+Dim img3_bottom As Integer
+
+Dim Deltax as integer
+Dim Deltay as integer
+/* Score system*/
+Dim p1score as integer
+Dim p2score as integer
+
+Dim countdown as integer
+
+Dim Distance as integer
+
+Dim number1 as integer
+
+Private Sub Form_OnOpen()
+  
+
+  
+  Distance = 50
+  movement = 0
+
+  tmrCountdown.enabled = true
+    'Set initial position of ball to the middle of the screen
+     
+    'Reset Scores
+    lblScore1.caption = "0"
+    lblScore2.caption = "0"
+    'Assign delta values
+     deltax = 3'imgball.y - 180
+     deltay = 2'imgball.x - 240
+     
+   
+    
+    'start the timer
+    
+End Sub
+
+
+Private Sub Form_OnKeyDown(KeyCode As Integer, Shift As Boolean, Control As Boolean, Alt As Boolean)
+  'movement up and down for both players
+  
+  'move down p1
+      If KeyCode = Key.S And lblplayer1.Top < 527-75 Then
+        lblplayer1.Top = lblplayer1.Top + Distance
+    End If
+  
+  'move up p1
+    If KeyCode = Key.W And lblplayer1.Top > 0 Then
+        lblplayer1.Top = lblplayer1.Top - Distance
+    End If
+    
+  'move down p2
+      If KeyCode = Key.Down And lblplayer2.Top < 527- 100 Then
+        lblplayer2.Top = lblplayer2.Top + Distance
+    End If
+  
+  'move up p2
+    If KeyCode = Key.Up And lblplayer2.Top > 0 Then
+        lblplayer2.Top = lblplayer2.Top - Distance
+    End If
+
+   
+
+End Sub 
+
+Dim movement as integer
+
+/* Ball movement */
+Private Sub tmrGame_OnEvent()
+
+  
+movement = movement + 1
+if movement = 1 then
+  imgball.value = ("FireballIndigo.png") end if
+  if movement = 10 then
+  imgball.value = ("FireballBlue.png") end if
+  if movement = 20 then
+  imgball.value = ("FireballGreen.png") end if
+  if movement = 30 then
+  imgball.value = ("FireballYellow.png") end if
+  if movement = 40 then
+  imgball.value = ("FireballOrange.png") end if
+  if movement = 50 then
+  imgball.value = ("FireballRed.png") end if
+  if movement = 60 then
+  imgball.value = ("FireballPink.png") end if
+  if movement = 70 then
+  imgball.value = ("FireballPurple.png") end if
+  if movement = 70 then
+  movement = 1 end if
+  
+/* Change the direction of X-axis when ball hit player2 pad */  
+  if Img2_right > Img3_left and Img2_top > img3_top and Img2_top < img3_bottom then
+    Deltax = -1 * Deltax
+  end if 
+  
+/* Change the direction of X-axis when ball hit player1 pad */  
+  if Img2_left < Img1_right and Img2_top > img1_top and Img2_top < img1_bottom then
+    Deltax = -1 * Deltax
+  end if  
+  
+/* Change the direction of X-axis when ball hit either right or left wall*/  
+  If Img2_left < 0 Or Img2_right > Form1.width Then
+    Deltax = -1 * Deltax
+  End If
+ 
+/* Change the direction of y-axis when ball hit either Top or Bottom wall*/ 
+  If Img2_Top < 0 Or Img2_bottom > Form1.Height Then
+    Deltay = -1 * Deltay
+  End If
+  
+  
+  imgBall.Left = imgBall.Left + Deltax
+  imgBall.Top = imgBall.Top + Deltay
+
+  /* Define player1 pad */
+  img1_top = lblPlayer1.Top
+  img1_left = lblPlayer1.Left
+  img1_right = lblPlayer1.Left + lblPlayer1.Width
+  img1_bottom = lblPlayer1.Top + lblPlayer1.Height
+  /* Define ball */
+  img2_top = imgBall.Top
+  img2_left = imgBall.Left
+  img2_right = imgBall.Left + imgBall.Width
+  img2_bottom = imgBall.Top + imgBall.Height
+  /* Define player2 pad*/
+  img3_top = lblPlayer2.Top
+  img3_left = lblPlayer2.Left
+  img3_right = lblPlayer2.Left + lblPlayer2.Width
+  img3_bottom = lblPlayer2.Top + lblPlayer2.Height
+
+/*Give point to player1 if ball hit right wall and give point to player2 if the ball hit left wall*/
+
+If img2_left < 0 Then
+ p2score = p2score + 1
+ lblscore2.caption = p2score & " Pts"
+ end if
+
+If img2_right > Form1.width Then
+ p1score = p1score + 1
+ lblscore1.caption = p1score & " Pts"
+ end if
+    
+ 
+/*When either player1 or 2 reach 5 points, disable timer that moves the ball and display who won the game*/
+  If Val(lblScore1.Caption) = 5 Then
+    MsgBox "Player 1 wins!"
+    tmrGame.Enabled = False
+    cmdRestart.Visible = True
+    cmdPause.visible = false
+  End If
+
+  If Val(lblScore2.Caption) = 5 Then
+    MsgBox "Player 2 wins!"
+    tmrGame.Enabled = False
+    cmdRestart.Visible = True
+    cmdPause.visible = false
+  End If
+
+End Sub
+
+/* Quit */
+Private Sub cmdQuit_OnEvent()
+  end
+End Sub
+
+
+/* timer at the begging of the game */
+Private Sub tmrcountdown_OnEvent()
+  countdown = countdown + 1
+  
+  if countdown = 1 then 
+    lblcountdown.caption = "3" end if
+    
+  if countdown = 2 then 
+    lblcountdown.caption = "2" end if
+    
+  if countdown = 3 then 
+    lblcountdown.caption = "1" end if  
+   
+  if countdown = 4 then 
+      tmrGame.enabled = true end if
+    
+  if countdown = 4 then 
+    lblcountdown.caption = "GO!!!" end if
+    
+  if countdown = 6 then 
+    lblcountdown.caption = "" end if
+    
+  if countdown = 6 then 
+    lblcountdown.visible = false end if
+    
+  if countdown = 6 then 
+    lblcountdown.enabled = false end if
+    
+    
+End Sub
+
+
+/* Instruction */
+Private Sub CmdInstruction_OnEvent()
+ msgbox ("Objective of this game is to hit ball with your pad to protect the ball from passing your pad and score a goal on your opponent")
+ msgbox ("Player1 use W as up and S as down key to move pad on left side")
+ msgbox ("Player2 use Arrow up as up and Arrow down as down to move pad on right side")
+End Sub
+
+/* Pause the timer for ball, disable the pad so players can't move their pad while the ball is on pause. 
+   Make this cmd invisible and make Unpause visible*/
+Private Sub CmdPause_OnEvent()
+tmrGame.enabled = false
+CmdUnPause.visible = true
+CmdPause.visible = false
+Distance = 0
+End Sub
+
+
+
+/* Unpause the timer for ball, allow the pad to move so players can move their pad when the ball start to move again. 
+   Make this cmd invisible and make pause visible*/
+
+Private Sub cmdUnPause_OnEvent()
+tmrGame.enabled = true
+cmdPause.visible = true
+cmdUnPause.visible = false
+Distance = 50
+End Sub
+
+
+
+/* on click, make the cmdpause visible and reset both players score as well as lbl that displays the score.
+   then move back the ball to the middle but randomize the height so ball will appear differently every time game is reset.
+   Finally make the reset botton invisible*/
+Private Sub CmdRestart_OnEvent()
+ Number1 = int(500* Rnd) + 1
+Countdown = 0
+Movement = 0
+lblcountdown.enabled = True
+cmdPause.visible = true
+lblcountdown.visible = True
+lblScore1.Caption = 0
+lblScore2.Caption = 0
+p2score = 0
+p1score = 0
+imgball.left = 440
+imgball.top = Number1
+CmdRestart.visible = False
+End Sub
+
